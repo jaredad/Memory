@@ -14875,6 +14875,7 @@ MonoBehaviour:
   player: {fileID: 2050643134}
   char_health: {fileID: 662788163}
   enemy_health: {fileID: 266171256}
+  scene: Stage 1
 --- !u!114 &2050643132
 MonoBehaviour:
   m_ObjectHideFlags: 0

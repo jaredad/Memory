@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class Battle : MonoBehaviour
         {
             Debug.Log("You won! You gained " + enemy.exp_given + " EXP!");
             PlayerPrefs.SetInt("ExperiencePoints",PlayerPrefs.GetInt("ExperiencePoints"+ enemy.exp_given));
+            SceneManager.LoadScene(scene);
         }
     }
 
