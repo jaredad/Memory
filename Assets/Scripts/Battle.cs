@@ -1,48 +1,94 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Battle : MonoBehaviour
 {
-    private Enemy enemy;
-    private Player player;
+    private GameObject obj;
+    private GameObject obj2;
+    public Enemy enemy;
+    public Player player;
+    public TextMeshProUGUI char_health;
+    public TextMeshProUGUI enemy_health;
+    private System.Random random = new System.Random();
+    private bool first = true;
+    private bool p_turn = true;
+    public string scene;
 
-    public Battle(string enemy_name)
+
+
+
+    void Start()
     {
-        enemy = new Enemy(enemy_name);
-        player = new Player();
+        
+        PlayerPrefs.SetString("Action", "");
+        char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
+        enemy_health.text = enemy.health.ToString() + " / " + enemy.max_health.ToString();
     }
 
-    public int game_loop()
+    void Update()
     {
-        bool first = true;
-        while (PlayerPrefs.GetInt("CurrentHealthPoints") > 0 || enemy.health > 0)
+        char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
+        enemy_health.text = enemy.health.ToString() + " / " + enemy.max_health.ToString();
+        if (PlayerPrefs.GetInt("Speed") >= enemy.speed && first == true)
         {
-            if (PlayerPrefs.GetInt("Speed") >= enemy.speed && first == true)
-            {
-                //wait for user selection
-                first = false;
-            }
-            else
-            {
-                player.Damage(enemy.Attack());
-                first = false;
-            }
-            //wait for user selection
-            if (enemy.health > 0)
-            {
-                player.Damage(enemy.Attack());
-            }
+            p_turn = true;
+            first = false;
+        } else if(first)
+        {
+            p_turn = false;
+            first = false;
         }
-        if (PlayerPrefs.GetInt("CurrentHealthPoints") < 0)
+        first = false;
+        if (p_turn)
+        {
+            UserSelection();
+            
+        } else
+        {
+            p_turn = true;
+            StartCoroutine(Waiting());
+        }
+        if (PlayerPrefs.GetInt("CurrentHitPoints") <= 0)
         {
             Debug.Log("You Died");
-            return 0;
         }
-        else
+        if(enemy.health <= 0)
         {
             Debug.Log("You won! You gained " + enemy.exp_given + " EXP!");
-            return enemy.exp_given;
+            PlayerPrefs.SetInt("ExperiencePoints",PlayerPrefs.GetInt("ExperiencePoints"+ enemy.exp_given));
         }
     }
-}
+
+    private void UserSelection()
+    {
+        Debug.Log(PlayerPrefs.GetString("Action"));
+            if(PlayerPrefs.GetString("Action") != "")
+            {
+                int num = random.Next(10);
+                if (PlayerPrefs.GetString("Action") == "Attack")
+                {
+                    if(num == 1) { enemy.Damage(player.Attack(2)); }
+                    else { enemy.Damage(player.Attack(1)); }
+                }
+                if(PlayerPrefs.GetString("Action") == "Psychic")
+                {
+                    if (num < 5) { enemy.Damage(player.PsyAttack(2)); }
+                    else { enemy.Damage(player.PsyAttack(1)-5); }
+                }
+                if(PlayerPrefs.GetString("Action") == "Heal")
+                {
+                    player.Heal(10);
+                }
+                PlayerPrefs.SetString("Action", "");
+                p_turn = false;
+            }
+        }
+    IEnumerator Waiting()
+    {
+        yield return new WaitForSeconds(2.0f);
+        player.Damage(enemy.Attack());
+    }
+    }

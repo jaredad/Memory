@@ -11,15 +11,15 @@ public class Enemy : MonoBehaviour
     public int exp_given;
     public string id;
 
-    public Enemy(string n)
+    void Start()
     {
-        List<int> values = EnemyType(n);
+        List<int> values = EnemyType(PlayerPrefs.GetString("CurrentEnemy"));
         max_health = values[0];
         health = values[0];
         attack = values[1];
         speed = values[2];
         exp_given = values[3];
-        id = n;
+        id = PlayerPrefs.GetString("CurrentEnemy");
     }
 
     public int Attack()
@@ -35,11 +35,11 @@ public class Enemy : MonoBehaviour
     public List<int> EnemyType(string n)
     {
         List<int> list = new List<int> { };
-        if (n == "imp")
+        if (n == "Imp")
         {
             list.Add(20);
+            list.Add(15);
             list.Add(10);
-            list.Add(9);
             list.Add(10);
         }
         //create other if characters

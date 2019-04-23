@@ -41,6 +41,7 @@ public class EncounterController : MonoBehaviour
             PlayerPrefs.SetString("StartX", player.transform.position.x.ToString());
             PlayerPrefs.SetString("StartY", player.transform.position.y.ToString());
             PlayerPrefs.SetString("StartZ", player.transform.position.z.ToString());
+            PlayerPrefs.SetString("CurrentEnemy", collision.gameObject.name);
             SceneManager.LoadScene("Battle Placeholder");
         }
     }

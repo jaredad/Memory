@@ -77,9 +77,15 @@ public class Player : MonoBehaviour
         return (attackRatio * PlayerPrefs.GetInt("Strength"));
     }
 
+    public int PsyAttack(int attackRatio)
+    {
+        return (attackRatio * PlayerPrefs.GetInt("Psychic"));
+    }
+
     public void Damage(int attack)
     {
         int temp = attack - PlayerPrefs.GetInt("Defense");
+        Debug.Log(temp);
         if (temp < 0)
         {
             PlayerPrefs.SetInt("CurrentHitPoints", PlayerPrefs.GetInt("CurrentHitPoints") - 1);
