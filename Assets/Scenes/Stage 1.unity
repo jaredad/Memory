@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &37783523
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -336,8 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &114036990
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -859,8 +859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &210807207
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -998,8 +998,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &257524569
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1200,8 +1200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &277627405
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1256,8 +1256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &291091796
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1778,8 +1778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &522728866
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2148,8 +2148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &635803751
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2279,8 +2279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &643166649
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2568,8 +2568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &737989720
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2646,8 +2646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &762085012
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2912,8 +2912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &800975025
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3245,8 +3245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!1 &863468595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1204596009998050, guid: 59ccd1309cd2ac94a8700faf3ab6a78d,
@@ -3265,8 +3265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &863468597
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4882,8 +4882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &1282563204
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5329,8 +5329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &1393671139
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5385,8 +5385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &1393741578
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5524,8 +5524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &1434479467
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5655,8 +5655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &1527907435
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6763,8 +6763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &1825700361
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7657,8 +7657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef4301452c8024b98ee176ce72b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 50
-  wanderTimer: 10
+  p: {fileID: 2119826982}
+  MoveSpeed: 4
 --- !u!195 &2038398878
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7928,6 +7928,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2099075273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2119826982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119826983}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119826983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119826982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 537676075}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2132437794
 PrefabInstance:
   m_ObjectHideFlags: 0
