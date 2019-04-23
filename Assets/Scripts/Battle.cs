@@ -59,7 +59,8 @@ public class Battle : MonoBehaviour
         if(enemy.health <= 0)
         {
             Debug.Log("You won! You gained " + enemy.exp_given + " EXP!");
-            PlayerPrefs.SetInt("ExperiencePoints",PlayerPrefs.GetInt("ExperiencePoints"+ enemy.exp_given));
+            player.Exp(enemy.exp_given);
+            Debug.Log(PlayerPrefs.GetInt("ExperiencePoints").ToString());
             SceneManager.LoadScene(scene);
         }
     }
