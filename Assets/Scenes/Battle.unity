@@ -14998,6 +14998,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4da3b65aab1a440bf954e8624d8c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  a: {fileID: 352622264}
+  b: {fileID: 488768388}
+  c: {fileID: 808235929}
   enemy: {fileID: 2050643133}
   player: {fileID: 2050643134}
   char_health: {fileID: 662788163}

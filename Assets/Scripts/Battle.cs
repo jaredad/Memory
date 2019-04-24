@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
     private GameObject obj;
     private GameObject obj2;
+    public Button a;
+    public Button b;
+    public Button c;
     public Enemy enemy;
     public Player player;
     public TextMeshProUGUI char_health;
@@ -91,7 +95,13 @@ public class Battle : MonoBehaviour
         }
     IEnumerator Waiting()
     {
+        a.enabled = false;
+        b.enabled = false;
+        c.enabled = false;
         yield return new WaitForSeconds(2.0f);
         player.Damage(enemy.Attack());
+        a.enabled = true;
+        b.enabled = true;
+        c.enabled = true;
     }
-    }
+}
