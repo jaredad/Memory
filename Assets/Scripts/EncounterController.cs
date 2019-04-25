@@ -14,9 +14,9 @@ public class EncounterController : MonoBehaviour
     void Start()
     {
         float startx, starty, startz;
-        startx = float.Parse(PlayerPrefs.GetString("StartX"));
-        starty = float.Parse(PlayerPrefs.GetString("StartY"));
-        startz = float.Parse(PlayerPrefs.GetString("StartZ"));
+        startx = 407.45f;
+        starty = 0.0f;
+        startz = 216.4f;
         Vector3 playerPosition = new Vector3(startx, starty, startz);
         player.transform.position = playerPosition;
     }
