@@ -222,4 +222,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 	}
-}
+
+    
+    }

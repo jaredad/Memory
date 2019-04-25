@@ -21,7 +21,6 @@ public class EncounterController : MonoBehaviour
         player.transform.position = playerPosition;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("y"))
@@ -43,6 +42,28 @@ public class EncounterController : MonoBehaviour
             PlayerPrefs.SetString("StartZ", player.transform.position.z.ToString());
             PlayerPrefs.SetString("CurrentEnemy", collision.gameObject.name);
             SceneManager.LoadScene("Battle");
+        }
+        if (collision.gameObject.name == "Strength")
+        {
+            UnityEngine.Object.Destroy(collision.gameObject);
+            PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 1);
+        }
+        else if (collision.gameObject.name == "Defense")
+        {
+            UnityEngine.Object.Destroy(collision.gameObject);
+            PlayerPrefs.SetInt("Defense", PlayerPrefs.GetInt("Defense") + 1);
+        }
+        else if (collision.gameObject.name == "Speed")
+        {
+            Debug.Log(PlayerPrefs.GetInt("Speed"));
+            UnityEngine.Object.Destroy(collision.gameObject);
+            PlayerPrefs.SetInt("Speed", PlayerPrefs.GetInt("Speed") + 1);
+            Debug.Log(PlayerPrefs.GetInt("Speed"));
+        }
+        else if (collision.gameObject.name == "Psychic")
+        {
+            UnityEngine.Object.Destroy(collision.gameObject);
+            PlayerPrefs.SetInt("Pyschic", PlayerPrefs.GetInt("Psychic") + 1);
         }
     }
 
