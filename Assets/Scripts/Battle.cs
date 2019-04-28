@@ -8,8 +8,10 @@ using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
-    private GameObject obj;
-    private GameObject obj2;
+    public GameObject playerObj;
+    public GameObject enemyObj;
+    public GameObject playerHit;
+    public GameObject enemyHit;
     public Button a;
     public Button b;
     public Button c;
@@ -21,16 +23,20 @@ public class Battle : MonoBehaviour
     private bool first = true;
     private bool p_turn = true;
     public string scene;
+    private Animator playerAnim;
+    private Animator enemyAnim;
 
 
 
 
     void Start()
     {
-        
+
         PlayerPrefs.SetString("Action", "");
         char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
         enemy_health.text = enemy.health.ToString() + " / " + enemy.max_health.ToString();
+        playerAnim = GetComponent<Animator>();
+        enemyAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,7 +47,7 @@ public class Battle : MonoBehaviour
         {
             p_turn = true;
             first = false;
-        } else if(first)
+        } else if (first)
         {
             p_turn = false;
             first = false;
@@ -50,7 +56,7 @@ public class Battle : MonoBehaviour
         if (p_turn)
         {
             UserSelection();
-            
+
         } else
         {
             p_turn = true;
@@ -60,7 +66,7 @@ public class Battle : MonoBehaviour
         {
             Debug.Log("You Died");
         }
-        if(enemy.health <= 0)
+        if (enemy.health <= 0)
         {
             Debug.Log("You won! You gained " + enemy.exp_given + " EXP!");
             player.Exp(enemy.exp_given);
@@ -72,34 +78,44 @@ public class Battle : MonoBehaviour
     private void UserSelection()
     {
         Debug.Log(PlayerPrefs.GetString("Action"));
-            if(PlayerPrefs.GetString("Action") != "")
+        if (PlayerPrefs.GetString("Action") != "")
+        {
+            int num = random.Next(10);
+            if (PlayerPrefs.GetString("Action") == "Attack")
             {
-                int num = random.Next(10);
-                if (PlayerPrefs.GetString("Action") == "Attack")
-                {
-                    if(num == 1) { enemy.Damage(player.Attack(2)); }
-                    else { enemy.Damage(player.Attack(1)); }
-                }
-                if(PlayerPrefs.GetString("Action") == "Psychic")
-                {
-                    if (num < 5) { enemy.Damage(player.PsyAttack(2)); }
-                    else { enemy.Damage(player.PsyAttack(1)-5); }
-                }
-                if(PlayerPrefs.GetString("Action") == "Heal")
-                {
-                    player.Heal(10);
-                }
-                PlayerPrefs.SetString("Action", "");
-                p_turn = false;
+                playerHit.SetActive(true);
+                int damageRoll = random.Next(10);
+                if (num == 1) { enemy.Damage(player.Attack(2 * damageRoll)); }
+                else { enemy.Damage(player.Attack(damageRoll)); }
             }
+            if (PlayerPrefs.GetString("Action") == "Psychic")
+            {
+                playerHit.SetActive(true);
+                int damageRoll = random.Next(10);
+                if (num == 1) { enemy.Damage(player.PsyAttack(2 * damageRoll)); }
+                else { enemy.Damage(player.PsyAttack(damageRoll)); }
+            }
+            if (PlayerPrefs.GetString("Action") == "Heal")
+            {
+                int healRoll = random.Next(10);
+                player.Heal(healRoll + (PlayerPrefs.GetInt("Psychic") / 2));
+            }
+            PlayerPrefs.SetString("Action", "");
+            p_turn = false;
         }
+    }
+
     IEnumerator Waiting()
     {
         a.enabled = false;
         b.enabled = false;
         c.enabled = false;
         yield return new WaitForSeconds(2.0f);
+        playerHit.SetActive(false);
         player.Damage(enemy.Attack());
+        enemyHit.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        enemyHit.SetActive(false);
         a.enabled = true;
         b.enabled = true;
         c.enabled = true;

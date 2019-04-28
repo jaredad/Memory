@@ -66,11 +66,4 @@ public class EncounterController : MonoBehaviour
             PlayerPrefs.SetInt("Pyschic", PlayerPrefs.GetInt("Psychic") + 1);
         }
     }
-
-    void setupEncounter()
-    {
-        //Move the player and instantiate the enemy.
-        //We can save the player's previous position through PlayerPrefs 
-        //and have them placed where they were before the fight after the battle concludes.
-    }
 }
