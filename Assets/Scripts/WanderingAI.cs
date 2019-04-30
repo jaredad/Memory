@@ -6,9 +6,11 @@ public class WanderingAI : MonoBehaviour
 {
 
     public GameObject p;
+    public Animator anim;
     public int MoveSpeed = 4;
     public float wanderRadius;
     public float wanderTimer;
+
     private Transform target;
     private NavMeshAgent agent;
     private float timer;
@@ -17,6 +19,7 @@ public class WanderingAI : MonoBehaviour
     void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         timer = wanderTimer;
     }
 
@@ -27,15 +30,18 @@ public class WanderingAI : MonoBehaviour
         {
             transform.LookAt(p.transform);
             agent.SetDestination(p.transform.position);
+            anim.Play("Walk");
         }
         else
         {
             timer += Time.deltaTime;
+            anim.Play("Walk");
 
             if (timer >= wanderTimer)
             {
                 Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
                 agent.SetDestination(newPos);
+                anim.Play("Walk");
                 timer = 0;
             }
         }
