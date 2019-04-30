@@ -45,8 +45,10 @@ public class EncounterController : MonoBehaviour
         }
         if (collision.gameObject.name == "Strength")
         {
+
             UnityEngine.Object.Destroy(collision.gameObject);
             PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 1);
+            
         }
         else if (collision.gameObject.name == "Defense")
         {
