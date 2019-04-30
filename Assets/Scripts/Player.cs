@@ -72,14 +72,14 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetString("type", "Psychic");
     }
 
-    public int Attack(int attackRatio)
+    public int Attack(int damageRoll)
     {
-        return (attackRatio * PlayerPrefs.GetInt("Strength"));
+        return damageRoll + (PlayerPrefs.GetInt("Strength") / 2);
     }
 
-    public int PsyAttack(int attackRatio)
+    public int PsyAttack(int damageRoll)
     {
-        return (attackRatio * PlayerPrefs.GetInt("Psychic"));
+        return damageRoll + (PlayerPrefs.GetInt("Psychic") / 2);
     }
 
     public void Damage(int attack)
