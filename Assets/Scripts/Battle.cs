@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
-    public GameObject playerObj;
-    public GameObject enemyObj;
+    public GameObject imp;
+    public GameObject goblin;
     public GameObject playerHit;
     public GameObject enemyHit;
     public Button a;
@@ -31,7 +31,14 @@ public class Battle : MonoBehaviour
 
     void Start()
     {
-
+        if (PlayerPrefs.GetString("CurrentEnemy").Equals("Imp"))
+        {
+            imp.SetActive(true);
+        }
+        else if (PlayerPrefs.GetString("CurrentEnemy").Equals("Goblin"))
+        {
+            goblin.SetActive(true);
+        }
         PlayerPrefs.SetString("Action", "");
         char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
         enemy_health.text = enemy.health.ToString() + " / " + enemy.max_health.ToString();

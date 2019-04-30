@@ -42,6 +42,13 @@ public class Enemy : MonoBehaviour
             list.Add(10);
             list.Add(10);
         }
+        if (n == "Goblin")
+        {
+            list.Add(25);
+            list.Add(20);
+            list.Add(15);
+            list.Add(15);
+        }
         //create other if characters
 
         return list;

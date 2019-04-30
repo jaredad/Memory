@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EncounterController : MonoBehaviour
 {
+    //public float startX, startY, startZ;
+    private float startX, startY, startZ;
     public GameObject player;
     public AudioSource sound;
     public string scene;
@@ -13,11 +15,10 @@ public class EncounterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float startx, starty, startz;
-        startx = 407.45f;
-        starty = 0.0f;
-        startz = 216.4f;
-        Vector3 playerPosition = new Vector3(startx, starty, startz);
+        startX = PlayerPrefs.GetFloat("StartX");
+        startY = PlayerPrefs.GetFloat("StartY");
+        startZ = PlayerPrefs.GetFloat("StartZ");
+        Vector3 playerPosition = new Vector3(startX, startY, startZ);
         player.transform.position = playerPosition;
     }
 
@@ -25,9 +26,9 @@ public class EncounterController : MonoBehaviour
     {
         if (Input.GetKeyDown("y"))
         {
-            PlayerPrefs.SetString("StartX", obj.transform.position.x.ToString());
-            PlayerPrefs.SetString("StartY", obj.transform.position.y.ToString());
-            PlayerPrefs.SetString("StartZ", obj.transform.position.z.ToString());
+            PlayerPrefs.SetFloat("StartX", player.transform.position.x);
+            PlayerPrefs.SetFloat("StartY", player.transform.position.y);
+            PlayerPrefs.SetFloat("StartZ", player.transform.position.z);
             sound.Play();
             SceneManager.LoadScene(scene);
         }
@@ -37,9 +38,9 @@ public class EncounterController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            PlayerPrefs.SetString("StartX", player.transform.position.x.ToString());
-            PlayerPrefs.SetString("StartY", player.transform.position.y.ToString());
-            PlayerPrefs.SetString("StartZ", player.transform.position.z.ToString());
+            PlayerPrefs.SetFloat("StartX", player.transform.position.x);
+            PlayerPrefs.SetFloat("StartY", player.transform.position.y);
+            PlayerPrefs.SetFloat("StartZ", player.transform.position.z);
             PlayerPrefs.SetString("CurrentEnemy", collision.gameObject.name);
             SceneManager.LoadScene("Battle");
         }

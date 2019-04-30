@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Defense", 10);
         PlayerPrefs.SetInt("Psychic", 8);
         PlayerPrefs.SetInt("Speed", 12);
-        PlayerPrefs.SetString("StartX", "407.45");
-        PlayerPrefs.SetString("StartY", "0");
-        PlayerPrefs.SetString("StartZ", "174.1999");
+        PlayerPrefs.SetFloat("StartX", 408f);
+        PlayerPrefs.SetFloat("StartY", 0f);
+        PlayerPrefs.SetFloat("StartZ", 175f);
         PlayerPrefs.SetString("type", "Quick");
     }
 
@@ -32,9 +32,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Defense", 10);
         PlayerPrefs.SetInt("Psychic", 8);
         PlayerPrefs.SetInt("Speed", 8);
-        PlayerPrefs.SetString("StartX", "407.45");
-        PlayerPrefs.SetString("StartY", "0");
-        PlayerPrefs.SetString("StartZ", "174.1999");
+        PlayerPrefs.SetFloat("StartX", 408f);
+        PlayerPrefs.SetFloat("StartY", 0f);
+        PlayerPrefs.SetFloat("StartZ", 175f);
         PlayerPrefs.SetString("type", "Strong");
     }
 
@@ -49,9 +49,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Defense", 12);
         PlayerPrefs.SetInt("Psychic", 8);
         PlayerPrefs.SetInt("Speed", 8);
-        PlayerPrefs.SetString("StartX", "407.45");
-        PlayerPrefs.SetString("StartY", "0");
-        PlayerPrefs.SetString("StartZ", "174.1999");
+        PlayerPrefs.SetFloat("StartX", 408f);
+        PlayerPrefs.SetFloat("StartY", 0f);
+        PlayerPrefs.SetFloat("StartZ", 175f);
         PlayerPrefs.SetString("type", "Defense");
     }
 
@@ -66,9 +66,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Defense", 8);
         PlayerPrefs.SetInt("Psychic", 12);
         PlayerPrefs.SetInt("Speed", 10);
-        PlayerPrefs.SetString("StartX", "407.45");
-        PlayerPrefs.SetString("StartY", "0");
-        PlayerPrefs.SetString("StartZ", "174.1999");
+        PlayerPrefs.SetFloat("StartX", 408f);
+        PlayerPrefs.SetFloat("StartY", 0f);
+        PlayerPrefs.SetFloat("StartZ", 175f);
         PlayerPrefs.SetString("type", "Psychic");
     }
 
@@ -127,33 +127,34 @@ public class Player : MonoBehaviour
 
     public void LevelUp()
     {
-            if (PlayerPrefs.GetString("type") == "Quick")
-            {
-                PlayerPrefs.SetInt("Speed", PlayerPrefs.GetInt("Speed") + 2);
-                PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 1);
-                PlayerPrefs.SetInt("Psychic", PlayerPrefs.GetInt("Psychic") + 1);
-                PlayerPrefs.SetInt("Defense", PlayerPrefs.GetInt("Defense") + 1);
-                PlayerPrefs.SetInt("MaximumHitPoints", PlayerPrefs.GetInt("MaximumHitPoints") + 10);
-                PlayerPrefs.SetInt("CurrentHitPoints", PlayerPrefs.GetInt("MaximumHitPoints"));
-
-            } else if(PlayerPrefs.GetString("type") == "Strong")
-            {
+        if (PlayerPrefs.GetString("type") == "Quick")
+        {
+            PlayerPrefs.SetInt("Speed", PlayerPrefs.GetInt("Speed") + 2);
+            PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 1);
+            PlayerPrefs.SetInt("Psychic", PlayerPrefs.GetInt("Psychic") + 1);
+            PlayerPrefs.SetInt("Defense", PlayerPrefs.GetInt("Defense") + 1);
+            PlayerPrefs.SetInt("MaximumHitPoints", PlayerPrefs.GetInt("MaximumHitPoints") + 10);
+            PlayerPrefs.SetInt("CurrentHitPoints", PlayerPrefs.GetInt("MaximumHitPoints"));
+        }
+        else if(PlayerPrefs.GetString("type") == "Strong")
+        {
             PlayerPrefs.SetInt("Speed", PlayerPrefs.GetInt("Speed") + 1);
             PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 2);
             PlayerPrefs.SetInt("Psychic", PlayerPrefs.GetInt("Psychic") + 1);
             PlayerPrefs.SetInt("Defense", PlayerPrefs.GetInt("Defense") + 1);
             PlayerPrefs.SetInt("MaximumHitPoints", PlayerPrefs.GetInt("MaximumHitPoints") + 10);
             PlayerPrefs.SetInt("CurrentHitPoints", PlayerPrefs.GetInt("MaximumHitPoints"));
-            }   else if (PlayerPrefs.GetString("type") == "Defense")
-            {
-            
+        }
+        else if (PlayerPrefs.GetString("type") == "Defense")
+        {         
             PlayerPrefs.SetInt("Speed", PlayerPrefs.GetInt("Speed") + 1);
             PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 1);
             PlayerPrefs.SetInt("Psychic", PlayerPrefs.GetInt("Psychic") + 1);
             PlayerPrefs.SetInt("Defense", PlayerPrefs.GetInt("Defense") + 2);
             PlayerPrefs.SetInt("MaximumHitPoints", PlayerPrefs.GetInt("MaximumHitPoints") + 10);
             PlayerPrefs.SetInt("CurrentHitPoints", PlayerPrefs.GetInt("MaximumHitPoints"));
-        } else if (PlayerPrefs.GetString("type") == "Psychic")
+        }
+        else if (PlayerPrefs.GetString("type") == "Psychic")
         {
             PlayerPrefs.SetInt("Speed", PlayerPrefs.GetInt("Speed") + 1);
             PlayerPrefs.SetInt("Strength", PlayerPrefs.GetInt("Strength") + 1);

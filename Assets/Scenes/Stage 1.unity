@@ -132,8 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &37783523
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -782,8 +782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &257524569
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -990,8 +990,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &277627405
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &291091796
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1569,7 +1569,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (4)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1728,8 +1732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &522728866
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2233,8 +2237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &643166649
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2524,8 +2528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &737989720
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2580,6 +2584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3cb6485f5a04a45b4d34ed7df8bf77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startX: 0
+  startY: 0
+  startZ: 0
   player: {fileID: 750874205}
   sound: {fileID: 799021745}
   scene: Stats
@@ -2651,7 +2658,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (5)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2945,8 +2956,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &800975025
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3219,8 +3230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &863468597
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4918,7 +4929,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (6)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5152,8 +5167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &1282563204
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5601,8 +5616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &1393671139
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5659,8 +5674,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &1393741578
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5924,7 +5939,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (7)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6238,7 +6257,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (2)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6560,8 +6583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &1527907435
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6607,7 +6630,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (1)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6688,7 +6715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 407.45
+      value: 408
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6696,7 +6723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 173.79
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6777,7 +6804,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7912,8 +7943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   MoveSpeed: 4
-  wanderRadius: 0
-  wanderTimer: 0
+  wanderRadius: 30
+  wanderTimer: 3
 --- !u!195 &1825700361
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9103,7 +9134,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_Name
-      value: Goblin_Ranger_R1 (3)
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: ed1f8609fea7f9348b92206e3d12581e, type: 3}
       propertyPath: m_LocalPosition.x
