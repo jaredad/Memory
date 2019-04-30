@@ -10,6 +10,7 @@ public class Battle : MonoBehaviour
 {
     public GameObject imp;
     public GameObject goblin;
+    public AudioSource attack;
     public GameObject playerHit;
     public GameObject enemyHit;
     public Button a;
@@ -42,7 +43,6 @@ public class Battle : MonoBehaviour
         PlayerPrefs.SetString("Action", "");
         char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
         enemy_health.text = enemy.health.ToString() + " / " + enemy.max_health.ToString();
-        playerAnim = GetComponent<Animator>();
         enemyAnim = GetComponent<Animator>();
     }
 
@@ -90,6 +90,7 @@ public class Battle : MonoBehaviour
             int num = random.Next(10);
             if (PlayerPrefs.GetString("Action") == "Attack")
             {
+                attack.Play();
                 playerHit.SetActive(true);
                 int damageRoll = random.Next(10);
                 if (num == 1) { enemy.Damage(player.Attack(2 * damageRoll)); }
@@ -97,6 +98,7 @@ public class Battle : MonoBehaviour
             }
             if (PlayerPrefs.GetString("Action") == "Psychic")
             {
+                attack.Play();
                 playerHit.SetActive(true);
                 int damageRoll = random.Next(10);
                 if (num == 1) { enemy.Damage(player.PsyAttack(2 * damageRoll)); }
@@ -104,6 +106,7 @@ public class Battle : MonoBehaviour
             }
             if (PlayerPrefs.GetString("Action") == "Heal")
             {
+                attack.Play();
                 int healRoll = random.Next(10);
                 player.Heal(healRoll + (PlayerPrefs.GetInt("Psychic") / 2));
             }
