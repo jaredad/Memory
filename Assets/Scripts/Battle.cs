@@ -47,6 +47,10 @@ public class Battle : MonoBehaviour
         else if (PlayerPrefs.GetString("CurrentEnemy").Equals("Skeleton"))
         {
             skeleton.SetActive(true);
+        } else if (PlayerPrefs.GetString("CurrentEnemy").Equals("Boss"))
+        {
+            skeleton.SetActive(true);
+            skeleton.transform.localScale += new Vector3(2.0F, 2.0f, 2.0f);
         }
         PlayerPrefs.SetString("Action", "");
         char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();

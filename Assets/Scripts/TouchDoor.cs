@@ -10,6 +10,7 @@ public class TouchDoor : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            PlayerPrefs.SetString("CurrentEnemy", "Boss");
             SceneManager.LoadScene(scene);
         }
         

@@ -7707,7 +7707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c58b7323c47f447ab20af0c9a1b720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Boss 1
+  scene: Battle
 --- !u!1001 &1445101176
 PrefabInstance:
   m_ObjectHideFlags: 0
