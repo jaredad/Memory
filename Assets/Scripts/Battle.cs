@@ -27,6 +27,7 @@ public class Battle : MonoBehaviour
     private bool first = true;
     private bool p_turn = true;
     public string scene;
+    public string gameOverScene;
     private Animator playerAnim;
     private Animator enemyAnim;
 
@@ -78,6 +79,7 @@ public class Battle : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("CurrentHitPoints") <= 0)
         {
+            SceneManager.LoadScene(gameOverScene);
             Debug.Log("You Died");
         }
         if (enemy.health <= 0)

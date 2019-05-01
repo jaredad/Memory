@@ -725,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15944,6 +15944,7 @@ MonoBehaviour:
   char_health: {fileID: 662788163}
   enemy_health: {fileID: 266171256}
   scene: Stage 1
+  gameOverScene: Start Screen
 --- !u!114 &2050643132
 MonoBehaviour:
   m_ObjectHideFlags: 0
