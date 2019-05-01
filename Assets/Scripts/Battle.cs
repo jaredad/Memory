@@ -37,6 +37,7 @@ public class Battle : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetString("CurrentEnemy", "Boss");
         if (PlayerPrefs.GetString("CurrentEnemy").Equals("Imp"))
         {
             imp.SetActive(true);
@@ -57,7 +58,8 @@ public class Battle : MonoBehaviour
         {
             boss1.SetActive(true);
         }
-            PlayerPrefs.SetString("Action", "");
+        
+        PlayerPrefs.SetString("Action", "");
         char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
         enemy_health.text = enemy.health.ToString() + " / " + enemy.max_health.ToString();
         enemyAnim = GetComponent<Animator>();
