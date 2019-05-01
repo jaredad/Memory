@@ -13,11 +13,14 @@ public class StatScreen : MonoBehaviour
     public TextMeshProUGUI def;
     public TextMeshProUGUI psy;
     public TextMeshProUGUI spd;
+    public TextMeshProUGUI best;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("Best", 15);
         type.text = PlayerPrefs.GetString("type");
         level.text = "Level: " + PlayerPrefs.GetInt("Level").ToString();
         exp.text = "EXP: " + PlayerPrefs.GetInt("ExperiencePoints").ToString();
@@ -26,5 +29,6 @@ public class StatScreen : MonoBehaviour
         def.text = "DEF: " + PlayerPrefs.GetInt("Defense").ToString();
         psy.text = "PSY: " + PlayerPrefs.GetInt("Psychic").ToString();
         spd.text = "SPD: " + PlayerPrefs.GetInt("Speed").ToString();
+        best.text = PlayerPrefs.GetInt("Best").ToString();
     }
 }
