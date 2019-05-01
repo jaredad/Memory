@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour
             list.Add(20);
             list.Add(15);
         }
+<<<<<<< HEAD
         if (n == "Boss")
         {
             list.Add(350);
@@ -63,6 +64,7 @@ public class Enemy : MonoBehaviour
             list.Add(35);
             list.Add(100);
         }
+
         return list;
     }
 }
