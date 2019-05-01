@@ -88,6 +88,11 @@ public class Battle : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("CurrentHitPoints") <= 0)
         {
+            PlayerPrefs.SetString("Output", "You Lost... Final EXP = " + PlayerPrefs.GetInt("ExperiencePoints").ToString());
+            if (PlayerPrefs.GetInt("ExperiencePoints") > PlayerPrefs.GetInt("Best"))
+            {
+                PlayerPrefs.SetInt("Best", PlayerPrefs.GetInt("ExperiencePoints"));
+            }
             SceneManager.LoadScene(gameOverScene);
             Debug.Log("You Died");
         }
@@ -96,7 +101,18 @@ public class Battle : MonoBehaviour
             Debug.Log("You won! You gained " + enemy.exp_given + " EXP!");
             player.Exp(enemy.exp_given);
             Debug.Log(PlayerPrefs.GetInt("ExperiencePoints").ToString());
-            SceneManager.LoadScene(scene);
+            if(enemy.name != "Boss")
+            {
+                SceneManager.LoadScene(scene);
+            } else
+            {
+                PlayerPrefs.SetString("Output", "You Won! Final EXP = " + PlayerPrefs.GetInt("ExperiencePoints").ToString());
+                if (PlayerPrefs.GetInt("ExperiencePoints") > PlayerPrefs.GetInt("Best"))
+                {
+                    PlayerPrefs.SetInt("Best", PlayerPrefs.GetInt("ExperiencePoints"));
+                }
+                SceneManager.LoadScene(gameOverScene);
+            }
         }
     }
 

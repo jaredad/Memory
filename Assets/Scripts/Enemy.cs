@@ -44,19 +44,19 @@ public class Enemy : MonoBehaviour
         }
         if (n == "Goblin")
         {
-            list.Add(25);
+            list.Add(60);
             list.Add(20);
             list.Add(15);
             list.Add(15);
         }
         if (n == "Skeleton")
         {
-            list.Add(30);
+            list.Add(50);
             list.Add(10);
             list.Add(20);
             list.Add(15);
         }
-<<<<<<< HEAD
+
         if (n == "Boss")
         {
             list.Add(350);
