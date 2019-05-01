@@ -56,6 +56,13 @@ public class Enemy : MonoBehaviour
             list.Add(20);
             list.Add(15);
         }
+        if (n == "Boss1")
+        {
+            list.Add(75);
+            list.Add(30);
+            list.Add(35);
+            list.Add(50);
+        }
         //create other if characters
 
         return list;
