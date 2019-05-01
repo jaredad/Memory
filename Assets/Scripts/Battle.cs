@@ -12,6 +12,8 @@ public class Battle : MonoBehaviour
     public GameObject goblin;
     public GameObject skeleton;
     public AudioSource attack;
+    public AudioSource p_attack;
+    public AudioSource p_heal;
     public GameObject playerHit;
     public GameObject enemyHit;
     public Button a;
@@ -103,7 +105,7 @@ public class Battle : MonoBehaviour
             }
             if (PlayerPrefs.GetString("Action") == "Psychic")
             {
-                attack.Play();
+                p_attack.Play();
                 playerHit.SetActive(true);
                 int damageRoll = random.Next(10);
                 if (num == 1) { enemy.Damage(player.PsyAttack(2 * damageRoll)); }
@@ -111,7 +113,7 @@ public class Battle : MonoBehaviour
             }
             if (PlayerPrefs.GetString("Action") == "Heal")
             {
-                attack.Play();
+                p_heal.Play();
                 int healRoll = random.Next(10);
                 player.Heal(healRoll + (PlayerPrefs.GetInt("Psychic") / 2));
             }

@@ -268,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &37783523
@@ -281,7 +281,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &257524569
@@ -1354,7 +1354,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &277627405
@@ -1699,7 +1699,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &291091796
@@ -1758,7 +1758,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2544,7 +2544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &522728866
@@ -2557,7 +2557,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -3165,7 +3165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &643166649
@@ -3178,7 +3178,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -3571,7 +3571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &737989720
@@ -3584,7 +3584,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -3998,7 +3998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &800975025
@@ -4011,7 +4011,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &863468597
@@ -4401,7 +4401,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6668,7 +6668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &1282563204
@@ -6681,7 +6681,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -7254,7 +7254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &1393671139
@@ -7267,7 +7267,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -7313,7 +7313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &1393741578
@@ -7326,7 +7326,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -8361,7 +8361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &1527907435
@@ -8374,7 +8374,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -10169,7 +10169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 750874205}
   anim: {fileID: 0}
-  MoveSpeed: 4
+  MoveSpeed: 15
   wanderRadius: 30
   wanderTimer: 3
 --- !u!195 &1825700361
@@ -10182,7 +10182,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
