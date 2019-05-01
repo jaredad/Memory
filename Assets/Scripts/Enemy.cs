@@ -49,6 +49,13 @@ public class Enemy : MonoBehaviour
             list.Add(15);
             list.Add(15);
         }
+        if (n == "Skeleton")
+        {
+            list.Add(30);
+            list.Add(10);
+            list.Add(20);
+            list.Add(15);
+        }
         //create other if characters
 
         return list;

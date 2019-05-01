@@ -10,6 +10,7 @@ public class Battle : MonoBehaviour
 {
     public GameObject imp;
     public GameObject goblin;
+    public GameObject skeleton;
     public AudioSource attack;
     public GameObject playerHit;
     public GameObject enemyHit;
@@ -39,6 +40,10 @@ public class Battle : MonoBehaviour
         else if (PlayerPrefs.GetString("CurrentEnemy").Equals("Goblin"))
         {
             goblin.SetActive(true);
+        }
+        else if (PlayerPrefs.GetString("CurrentEnemy").Equals("Skeleton"))
+        {
+            skeleton.SetActive(true);
         }
         PlayerPrefs.SetString("Action", "");
         char_health.text = PlayerPrefs.GetInt("CurrentHitPoints").ToString() + " / " + PlayerPrefs.GetInt("MaximumHitPoints").ToString();
